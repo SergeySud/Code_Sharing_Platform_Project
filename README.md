@@ -1,8 +1,10 @@
 # Code_sharing_platform
 A web app for storing code snippets.
 
-POST `/api/code/new` and GET `/code/new` allow adding new snippets.
+POST `/add` with JSON load `"url": *{url}*` allows adding new links.
 
-GET `/code/*{uuid}*` and GET `/api/code/*{uuid}*` allow finding snippets by UUID.
+GET `/*{uuid}*` redirects to the urls. 
 
-GET `api/code/latest` and GET `code/latest` show last 10 public snippets.
+GET `/all` shows all links. Requires user to be authenticated.
+
+DELETE `/*{uuid}*` deletes the link.  Requires user to be authenticated.
